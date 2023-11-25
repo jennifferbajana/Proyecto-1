@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>Ver Docente</title>
+    <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</head>
+<style>
+    body {background-color:beige;}
+    h3 {color:blue;}
+</style>
+<body>
+    <br>
+    <br>
+    <h3>Datos del Docente</h3>
+Id: {{docente.id}}<br>
+Nombre: {{docente.nombre}}<br>
+Apellido: {{docente.apellido}}<br>
+Cedula: {{docente.cedula}}<br>
+Email: {{docente.email}}<br>
+Materia: {{docente.materia}}<br>
+Institucion: {{docente.institucion}}<br>
+Fecha de nacimiento: {{docente.fecha_de_nacimiento}}<br>
+Celular: {{docente.celular}}<br>
+Sexo: {{docente.sexo}}<br>
+Estado: {% if docente.activo %}
+                            Activo
+                      {% else %}
+                            Inactivo
+                      {% endif %}<br>
+
+
+
+    <br>
+    <br>
+
+    <a href="{%url 'inicio'%}" class="btn btn-info">Regresar <i class="fa-solid fa-arrow-left"></i></a><br>
+
+</body>
+</html>
