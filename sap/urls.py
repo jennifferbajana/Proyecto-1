@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from docentes.views import agregar_docente, ver_docente, eliminar_docente, modificar_docente
+from docentes.views import agregar_docente, ver_docente, eliminar_docente, modificar_docente, generar_reporte
 from webapp.views import bienvenida, bienvenida2
 
 urlpatterns = [
@@ -27,4 +27,5 @@ urlpatterns = [
     path('ver_docente/<int:id>', ver_docente),
     path('eliminar_docente/<int:id>', eliminar_docente),
     path('modificar_docente/<int:id>', modificar_docente),
+    path('generar_reporte/', generar_reporte),
 ]
